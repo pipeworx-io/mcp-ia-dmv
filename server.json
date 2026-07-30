@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.pipeworx-io/ia-dmv",
+  "title": "Iowa DOT Driver Licensing",
+  "description": "Iowa DOT driver license stations with hours, CDL availability and queue cameras",
+  "version": "0.1.0",
+  "websiteUrl": "https://pipeworx.io/packs/ia-dmv",
+  "repository": {
+    "url": "https://github.com/pipeworx-io/mcp-ia-dmv",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://gateway.pipeworx.io/ia-dmv/mcp"
+    }
+  ]
+}
