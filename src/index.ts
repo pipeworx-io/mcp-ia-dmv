@@ -1,11 +1,19 @@
 interface McpToolDefinition {
   name: string;
   description: string;
+  /** Human-facing one-liner (fleet #1967). Optional; consumers fall back to
+   *  description. Kept in step with shared/src/types.ts — scripts/lib/
+   *  check-inlined-types.mjs reports drift at publish time. */
+  summary?: string;
   inputSchema: {
     type: 'object';
     properties: Record<string, unknown>;
     required?: string[];
+    anyOf?: Array<{ required: string[] }>;
+    oneOf?: Array<{ required: string[] }>;
+    allOf?: Array<{ required: string[] }>;
   };
+  outputSchema?: Record<string, unknown>;
 }
 
 interface McpToolExport {
@@ -298,8 +306,6 @@ function govJoinHours(parts: Array<[string, unknown]>): string | null {
     .map(([day, v]) => `${day} ${String(v).trim()}`);
   return out.length ? out.join('; ') : null;
 }
-
-
 /**
  * Iowa DMV MCP — the Iowa DOT Motor Vehicle Division's 18 driver license stations, with hours,
  * CDL testing, and the live queue cameras Iowa points at its own waiting rooms. Keyless.

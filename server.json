@@ -1,9 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.pipeworx-io/ia-dmv",
-  "title": "Iowa DOT Driver Licensing",
-  "description": "Iowa DOT driver license stations with hours, CDL availability and queue cameras",
-  "version": "0.1.0",
+  "title": "Ia Dmv",
+  "description": "Iowa DMV MCP — the Iowa DOT Motor Vehicle Division's 18 driver license stations, with hours,",
+  "version": "0.1.1",
   "websiteUrl": "https://pipeworx.io/packs/ia-dmv",
   "repository": {
     "url": "https://github.com/pipeworx-io/mcp-ia-dmv",
