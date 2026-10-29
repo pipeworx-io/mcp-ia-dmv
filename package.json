@@ -1,12 +1,20 @@
 {
   "name": "@pipeworx/mcp-ia-dmv",
-  "version": "0.1.1",
-  "description": "Iowa DMV MCP — the Iowa DOT Motor Vehicle Division's 18 driver license stations, with hours,",
+  "version": "0.2.0",
+  "description": "Iowa DMV MCP — the Iowa DOT Motor Vehicle Division's 18 driver license stations, with hours, CDL testing, and the live queue cameras Iowa points at its own waiting rooms. Keyless.",
   "type": "module",
-  "main": "src/index.ts",
-  "types": "src/index.ts",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./tools.json": "./tools.json",
+    "./package.json": "./package.json"
+  },
   "bin": {
     "mcp-ia-dmv": "bin/cli.js"
+  },
+  "files": ["bin/", "lib/", "tools.json", "server.json"],
+  "engines": {
+    "node": ">=18"
   },
   "keywords": ["mcp", "mcp-server", "model-context-protocol", "pipeworx", "ia-dmv"],
   "license": "MIT",
@@ -14,19 +22,12 @@
     "type": "git",
     "url": "git+https://github.com/pipeworx-io/mcp-ia-dmv.git"
   },
-  "scripts": {
-    "typecheck": "tsc --noEmit"
-  },
-  "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.30.0",
-    "tsx": "^4.19.0"
-  },
-  "devDependencies": {
-    "typescript": "^5.9.3",
-    "@cloudflare/workers-types": "^4.20260405.1"
-  },
+  "mcpName": "io.github.pipeworx-io/ia-dmv",
   "pipeworx": {
-    "sourceHash": "v1-ceda85ee062cc38861ce17378dd1ff604efca417152e5fde8ff471d9b03956cb",
-    "sourceCommit": "70cd53748fc9f9a43ed3681d751bfa96e701efd2"
+    "mode": "gateway",
+    "slug": "ia-dmv",
+    "gatewaySlug": "ia-dmv",
+    "sourceHash": "v1-257f0bc49234342df1e1ffe9178ae9863865b278d041c7edba2c8da7adddaae1",
+    "sourceCommit": "4844029e402d6bd2fe735add8abf6d46735f8ed5"
   }
 }
