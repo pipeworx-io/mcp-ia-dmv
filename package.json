@@ -1,6 +1,6 @@
 {
   "name": "@pipeworx/mcp-ia-dmv",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Iowa DMV MCP — the Iowa DOT Motor Vehicle Division's 18 driver license stations, with hours, CDL testing, and the live queue cameras Iowa points at its own waiting rooms. Keyless.",
   "type": "module",
   "main": "lib/index.js",
@@ -27,7 +27,7 @@
     "mode": "gateway",
     "slug": "ia-dmv",
     "gatewaySlug": "ia-dmv",
-    "sourceHash": "v1-257f0bc49234342df1e1ffe9178ae9863865b278d041c7edba2c8da7adddaae1",
-    "sourceCommit": "4844029e402d6bd2fe735add8abf6d46735f8ed5"
+    "sourceHash": "v1-93d45e26e6bc11e6474d3fe7535649d630cc64ada6ff5b70153777f34bb86f56",
+    "sourceCommit": "0ca9712c0ac03bb0121cc7e81b202d0c45ac02ca"
   }
 }
